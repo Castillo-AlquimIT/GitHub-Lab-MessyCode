@@ -1,11 +1,28 @@
-#this program add numbers and print the result but its really messy
+def addNumbers(num1, num2):
+    return num1 + num2
 
-def addnumb(a,b):return a+b
-def main( ):
-  print("This is a simple adder program")
-  a=input("enter first number")
-  b=input("enter second number")
-  res=addnumb(int(a),int(b))
-  print("the sum is :",res)
-main( )#call the function at end
-# KELVIN CODE
+def getValidnumber(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+        except KeyboardInterrupt:
+            print("\nInput interrupted. Exiting.")
+            exit(1)
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            exit(1)
+
+def main():
+    try:
+        print("Welcome to the Simple Adder Program!")
+        first_number = getValidnumber("Enter the first number: ")
+        second_number = getValidnumber("Enter the second number: ")
+        result = addNumbers(first_number, second_number)
+        print(f"The sum is: {result}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        exit(1)
+
+main()
