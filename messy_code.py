@@ -1,3 +1,4 @@
+HEAD
 def addNumbers(num1, num2):
     return num1 + num2
 
@@ -26,3 +27,26 @@ def main():
         exit(1)
 #hi po
 main()
+
+
+def addNumber(firstNumber, secondNumber):
+    return firstNumber + secondNumber
+
+def main():
+    print("======This is a Simple Adder Program======") 
+
+    while True:
+      try:
+          firstNumber = int(input("Enter the first number: "))
+          secondNumber = int(input("Enter the second number: "))
+          break
+
+      except ValueError:
+          print("INVALID INPUT!!! Please enter proper numeric values...")
+
+    #RESULT
+    result = addNumber(firstNumber, secondNumber)
+    print("ANSWER: ", result)
+
+main()
+b518417 (Cleaned up messy code and added error handling)
