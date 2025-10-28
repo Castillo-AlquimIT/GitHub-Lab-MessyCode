@@ -44,7 +44,7 @@ def main():
       except ValueError:
           print("INVALID INPUT!!! Please enter proper numeric values...")
 
-    #RESULT
+    #Operation & Result
     result = addNumber(firstNumber, secondNumber)
     print("ANSWER: ", result)
 
